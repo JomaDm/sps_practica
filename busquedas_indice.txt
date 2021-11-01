@@ -1,0 +1,38 @@
+# Paso 1
+GET log_consultas/_count
+{
+  "query": {
+    "regexp": {
+      "estado_consulta": "(consumo)?(error)?"
+    }
+  }
+}
+# Paso 2
+GET log_consultas/_count
+{
+  "query": {
+    "match": {
+      "administrador": "Juan Lara"
+    }
+  }
+}
+#Paso 3
+GET log_consultas/_count
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "estado_consulta": "informativo"
+          }
+        },
+        {
+          "match": {
+            "servicio": "borrado"
+          }
+        }
+      ]
+    }
+  }
+}
