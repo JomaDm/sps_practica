@@ -5,3 +5,5 @@ Esta practica consiste en realizar una practica siguiendo las instrucciones que 
 # Inconvenientes
 -Se puede agregar a Index Patterns el indice "log_consultas"
 -Al momento de realizar el tablero para visualizar los atributos introducidos aparecen como vacios
+
+## Practica completada
